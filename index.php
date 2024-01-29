@@ -22,7 +22,16 @@ $_SESSION['accountName'] = 'Алекс';
   <div id="menu">
     <div class="menu-header">
       <span class="menu-name">Menu</span>
-      <div id="collapse-button">>></div>
+      <div id="collapse-button">
+        <svg version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128"
+          style="enable-background:new 0 0 128 128" xml:space="preserve">
+          <g id="_x31_7_1_">
+            <path
+              d="M42.8 37.3 37.4 41 64 64 37.4 88l5.3 2.7L72 64 42.8 37.3zM64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm0-81.7 26.6 23-26.6 24 5.3 2.7L98.7 64 69.4 37.3 64.1 41z"
+              id="icon_22_" />
+          </g>
+        </svg>
+      </div>
     </div>
     <h3 class="menu-item-header" onclick="rollList('devices', 'devices-arrow')">УСТРОЙСТВА
       <svg class="arrow rotated" id="devices-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="6"
@@ -123,8 +132,9 @@ $_SESSION['accountName'] = 'Алекс';
         c0,51.3,41.8,93.1,93.1,93.1h125.9c9.5,0,17.2-7.7,17.2-17.1c0-9.5-7.7-17.2-17.2-17.2H110.7c-32.4,0-58.8-26.4-58.8-58.8V93.1
         C52,60.6,78.3,34.3,110.7,34.3z" />
           </svg>
-          <svg fill="var(--dark-tone-60)" height="30px" width="30px" version="1.1" id="logout-arrow" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 489.9 489.9" xml:space="preserve">
+          <svg fill="var(--dark-tone-60)" height="30px" width="30px" version="1.1" id="logout-arrow"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 489.9 489.9"
+            xml:space="preserve">
             <path d="M468.3,255.8c0.1-0.1,0.1-0.1,0.2-0.2c0.3-0.4,0.6-0.7,0.8-1.1c0.1-0.1,0.1-0.2,0.2-0.3c0.2-0.4,0.5-0.8,0.7-1.2
 				c0-0.1,0.1-0.2,0.1-0.2c0.2-0.4,0.4-0.8,0.6-1.3c0-0.1,0-0.1,0.1-0.2c0.2-0.4,0.3-0.9,0.5-1.4c0-0.1,0-0.2,0.1-0.2
 				c0.1-0.5,0.3-0.9,0.3-1.4c0-0.2,0-0.3,0.1-0.5c0.1-0.4,0.1-0.8,0.2-1.2c0.1-0.6,0.1-1.1,0.1-1.7c0-0.6,0-1.1-0.1-1.7
@@ -202,7 +212,7 @@ $_SESSION['accountName'] = 'Алекс';
                 </path>
               </g>
             </svg>
-            <input class="input" type="search" id="searchInput" placeholder="Search"/>
+            <input class="input" type="search" id="searchInput" placeholder="Search" />
           </div>
 
         </div>

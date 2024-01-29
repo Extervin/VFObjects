@@ -68,12 +68,12 @@ $result = mysqli_query($conn, $sql);
 echo '<table id="databaseTable">
           <thead>
               <tr>
-                <th id="id-column" onclick="sortTable(0)">#</th>
-                <th id="connection-column" onclick="sortTable(1)">Connection</th>
-                <th onclick="sortTable(2)">Object Name</th>
-                <th onclick="sortTable(3)">IT</th>
-                <th onclick="sortTable(4)">Архив</th>
-                <th onclick="sortTable(5)">Смяна на версия</th>
+                <th id="id-column">#</th>
+                <th id="connection-column">Connection</th>
+                <th>Object Name</th>
+                <th>IT</th>
+                <th>Архив</th>
+                <th>Смяна на версия</th>
               </tr>
           </thead>
           <tbody>';
