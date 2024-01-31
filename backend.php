@@ -71,6 +71,7 @@ echo '<table id="databaseTable">
                 <th id="id-column">#</th>
                 <th id="connection-column">Connection</th>
                 <th>Object Name</th>
+                <th>Тагове</th>
                 <th>IT</th>
                 <th>Архив</th>
                 <th>Смяна на версия</th>
@@ -87,6 +88,11 @@ while ($row = mysqli_fetch_assoc($result)) {
               </div>
             </td>
             <td>{$row['Obekt']}</td>
+            <td class='tag-container'>
+            <span class='tag'>{$row['mode']}</span>
+            <span class='tag'>{$row['mode']}</span>
+            <span class='tag'>{$row['mode']}</span>
+            </td>
             <td>{$row['IT']}</td>
             <td>";
 

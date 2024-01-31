@@ -108,13 +108,14 @@ table {
 }
 
 th, td {
-  padding: 12px;
+  padding: 6px;
   text-align: center;
   border: 1px solid #ddd;
 }
 
 th {
   text-align: center;
+  padding: 18px 6px;
 }
 
 .sortable {
@@ -432,9 +433,61 @@ hr {
   font-size: 26px;
   color: #FFF;
 }
-#collapse-button {
-  font-size: 26px;
-  color: #FFF;
+input[type = "checkbox"] {
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.bar {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+}
+
+.bar span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #f1faee;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.bar span.top {
+  top: 0;
+}
+
+.bar span.middle {
+  top: 11px;
+}
+
+.bar span.bottom {
+  bottom: 0;
+}
+
+input[type]:checked ~ span.top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 34px;
+  left: 2px;
+}
+
+input[type]:checked ~ span.bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 34px;
+  bottom: -2px;
+  box-shadow: 0 0 10px #495057;
+}
+
+input[type]:checked ~ span.middle {
+  transform: translateX(-20px);
+  opacity: 0;
 }
 
 /* misc styles*/
@@ -453,4 +506,18 @@ hr {
 .highlight-blank {
   color: inherit;
   transition: color 0.5s ease;
+}
+.tag-container {
+
+}
+
+.tag {
+  margin: 0px 2px;
+  padding: 0px 12px;
+  background-color: #4CAF500D;
+  color: #7ABB7D;
+  border-radius: 15px;
+  border: 1px solid #8CD58F;
+  font-weight: 300;
+  cursor: default;
 }
