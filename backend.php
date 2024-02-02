@@ -79,22 +79,58 @@ echo '<table id="databaseTable">
           </thead>
           <tbody>';
 
-while ($row = mysqli_fetch_assoc($result)) {
-    echo "<tr>
-            <td>$index</td>
-            <td>
-              <div class='connection-icon-container'>
-                <div class='connection-icon red'></div>
-              </div>
-            </td>
-            <td>{$row['Obekt']}</td>
-            <td class='tag-container'>
-            <span class='tag'>{$row['mode']}</span>
-            <span class='tag'>{$row['mode']}</span>
-            <span class='tag'>{$row['mode']}</span>
-            </td>
-            <td>{$row['IT']}</td>
-            <td>";
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>
+                    <td>$index</td>
+                    <td>
+                      <div class='connection-icon-container'>
+                        <div class='connection-icon red'></div>
+                      </div>
+                    </td>
+                    <td>{$row['Obekt']}</td>
+        
+                    <td class='tag-container'>";
+        
+            $dbString = $row['mode'];
+        
+            $taggedString = '';
+        
+            for ($i = 0; $i < strlen($dbString); $i++) {
+                $char = $dbString[$i];
+        
+                switch ($char) {
+                    case 'f':
+                        $taggedString .= "<span class='tag mt'>МТ</span>";
+                        break;
+                    case 'h':
+                        $taggedString .= "<span class='tag mtmx'>МТ</span>";
+                        break;
+                    case 'w':
+                        $taggedString .= "<span class='tag mtout'>МТ</span>";
+                        break;
+                    case 'v':
+                        $taggedString .= "<div class='tag hitV'>
+                        <svg width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M12 19.0267L17.5333 22.3733C18.5467 22.9867 19.7867 22.08 19.52 20.9333L18.0533 14.64L22.9467 10.4C23.84 9.62667 23.36 8.16 22.1867 8.06667L15.7467 7.52L13.2267 1.57334C12.7733 0.493336 11.2267 0.493336 10.7733 1.57334L8.25334 7.50667L1.81334 8.05334C0.640005 8.14667 0.160005 9.61334 1.05334 10.3867L5.94667 14.6267L4.48001 20.92C4.21334 22.0667 5.45334 22.9733 6.46667 22.36L12 19.0267Z' fill='#00ADF7'/>
+                        </svg>
+                        </div>";
+                        break;
+                    case 'm':
+                        $taggedString .= "<span class='tag NZOK'>НЗОК</span>";
+                        break;
+                    case 'p':
+                        $taggedString .= "<span class='tag three-percents'>3%</span>";
+                        break;
+                }
+            }
+        
+            // выводим результат внутри td
+            echo $taggedString;
+        
+            // продолжаем вывод остальной части строки
+            echo "</td>
+                    <td>{$row['IT']}</td>
+                    <td>";
 
     // Генерируем уникальные идентификаторы для a1
     $a1_id = "a1_" . $index;

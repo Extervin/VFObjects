@@ -510,14 +510,51 @@ input[type]:checked ~ span.middle {
 .tag-container {
 
 }
-
 .tag {
   margin: 0px 2px;
   padding: 0px 12px;
-  background-color: #4CAF500D;
-  color: #7ABB7D;
   border-radius: 15px;
-  border: 1px solid #8CD58F;
   font-weight: 300;
   cursor: default;
+}
+.mt {
+  color: #FF800D;
+  background-color: #ffe6ce;
+  border: 1px solid #FF800D;
+}
+.mtmx {
+  color: #99D5F1;
+  background-color: #e5f5fc;
+  border: 1px solid #99D5F1;
+}
+.mtout {
+  color: #C24850;
+  background-color: #f3dadc;
+  border: 1px solid #C24850;
+}
+.three-percents {
+  color: #F00D0D;
+  background-color: #fccece;
+  border: 1px solid #F00D0D;
+}
+.NZOK {
+  color: #F00D0D;
+  background-color: #fccece;
+  border: 1px solid #F00D0D;
+}
+.hit {
+  fill: #00ADF7;
+  background-color: rgba(0, 173, 247, 0.2);
+  border: 1px solid #00ADF7;
+  display: inline-block;
+}
+.hitV {
+  fill: #00ADF7;
+  background-color: #cceffe;
+  border: 1px solid #00ADF7;
+  display: inline-block;
+}
+.hitV svg {
+  width: 14px;
+  height: 14px;
 }
