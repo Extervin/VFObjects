@@ -227,3 +227,43 @@ $_SESSION['accountName'] = 'Алекс';
 </body>
 
 </html>
+
+<!-- 
+Этот код-пример для имплементирования добавления классов с помощью парсинга таблицы с помощью пхп
+<?php
+// Предположим, что условие выполняется. Замени на реальное условие.
+$isConditionMet = true;
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример</title>
+</head>
+<body>
+
+<?php
+// Твой PHP-код здесь...
+
+// Вывод существующего элемента с id и классом
+echo "<div id='myElement' class='existing-class'>Содержимое div-элемента</div>";
+?>
+
+<script>
+    // Проверка условия из PHP
+    var isConditionMet = <?php echo $isConditionMet ? 'true' : 'false'; ?>;
+
+    // Получаем элемент по его id
+    var myElement = document.getElementById('myElement');
+
+    // Добавляем класс, если условие выполняется
+    if (isConditionMet) {
+        myElement.classList.add('your-condition-class');
+    }
+</script>
+
+</body>
+</html>
+ -->
