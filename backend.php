@@ -80,29 +80,7 @@ echo '<table id="databaseTable">
           <tbody>';
 
           while ($row = mysqli_fetch_assoc($result)) {
-
-            $rowClasses = array();
-            $dbString = $row['mode'];
-
-            for ($i = 0; $i < strlen($dbString); $i++) {
-              $char = $dbString[$i];
-              switch ($char) {
-                case 'c':
-                    $rowClasses[] = 'click-object';
-                    break;
-                case 'o':
-                    $rowClasses[] = 'unusual';
-                    break;
-                case 'n';
-                    $rowClasses[] = 'new';
-                    break;
-                case 's';
-                    $rowClasses[] = 'closed';
-                    break;
-              }
-            }
-
-            echo "<tr class='" . implode(' ', $rowClasses) . "'>
+            echo "<tr>
                     <td>$index</td>
                     <td>
                       <div class='connection-icon-container'>
@@ -112,6 +90,8 @@ echo '<table id="databaseTable">
                     <td>{$row['Obekt']}</td>
         
                     <td class='tag-container'>";
+        
+            $dbString = $row['mode'];
         
             $taggedString = '';
         

@@ -558,24 +558,3 @@ input[type]:checked ~ span.middle {
   width: 14px;
   height: 14px;
 }
-tr {
-  transition: all 0.2s ease-in-out;
-}
-thead tr:hover {
-  box-shadow: inset 0 0 0 0 silver;
-}
-tr:hover {
-  box-shadow: inset 0 0 25px -10px silver;
-}
-.closed {
-  background-color: rgba(0, 100, 255, 0.1);
-}
-.new {
-  background-color: rgba(255, 0, 50, 0.1);
-}
-.unusual {
-  color: rgb(20, 157, 0);
-}
-.click-object {
-  background-color: rgba(255, 255, 65, 0.15);
-}
