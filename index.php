@@ -100,7 +100,7 @@ $_SESSION['accountName'] = 'Алекс';
     </ul>
   </div>
 
-  <header>
+  <header id="header">
     <div class="header-container">
       <div class="selector-container">
         <label for="table-selector">Выберите вариант:</label>
@@ -186,7 +186,7 @@ $_SESSION['accountName'] = 'Алекс';
                 </g>
               </svg>
             </div>
-            <div class="table-button" onclick="closeTable()">
+            <div class="table-button" onclick="goFullScreen('header', 'menu', 'table-rendering-place', 'breadcrumbs-container')">
               <svg xmlns="http://www.w3.org/2000/svg" id="close-icon" class="table-button-icon" viewBox="0 0 24 24"
                 width="20" height="24" fill="#484964" stroke="#484964" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
@@ -227,43 +227,3 @@ $_SESSION['accountName'] = 'Алекс';
 </body>
 
 </html>
-
-<!-- 
-Этот код-пример для имплементирования добавления классов с помощью парсинга таблицы с помощью пхп
-<?php
-// Предположим, что условие выполняется. Замени на реальное условие.
-$isConditionMet = true;
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пример</title>
-</head>
-<body>
-
-<?php
-// Твой PHP-код здесь...
-
-// Вывод существующего элемента с id и классом
-echo "<div id='myElement' class='existing-class'>Содержимое div-элемента</div>";
-?>
-
-<script>
-    // Проверка условия из PHP
-    var isConditionMet = <?php echo $isConditionMet ? 'true' : 'false'; ?>;
-
-    // Получаем элемент по его id
-    var myElement = document.getElementById('myElement');
-
-    // Добавляем класс, если условие выполняется
-    if (isConditionMet) {
-        myElement.classList.add('your-condition-class');
-    }
-</script>
-
-</body>
-</html>
- -->

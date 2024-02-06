@@ -109,7 +109,7 @@ echo '<table id="databaseTable">
                         <div class='connection-icon red'></div>
                       </div>
                     </td>
-                    <td>{$row['Obekt']}</td>
+                    <td class='object-name'>{$row['Obekt']}</td>
         
                     <td class='tag-container'>";
         

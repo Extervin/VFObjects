@@ -1,3 +1,32 @@
+
+function goFullScreen(headerID, menuID, containerID, breadcrumbsID) {
+	let header = document.getElementById(headerID);
+	let menu = document.getElementById(menuID);
+	let container = document.getElementById(containerID);
+	let breadcrumbs = document.getElementById(breadcrumbsID)
+
+	if (menu.style.display === 'none') {
+		breadcrumbs.style.removeProperty('display');
+		header.style.removeProperty('display');
+		menu.style.removeProperty('display');
+		container.style.removeProperty('marginTop');
+		container.style.removeProperty('marginRight');
+		container.style.removeProperty('marginBottom');
+		container.style.removeProperty('marginLeft');
+		container.style.removeProperty('height');
+	} else {
+		breadcrumbs.style.display = 'none';
+		header.style.display = 'none';
+		menu.style.display = 'none';
+		container.style.marginTop = '17px';
+		container.style.marginRight = '10px';
+		container.style.marginBottom = '0px';
+		container.style.marginLeft = '10px';
+		container.style.height = '98vh';
+	}
+
+}
+
 let changeAllowed = true;
 
 function rollList(uiID, arrowID) {
