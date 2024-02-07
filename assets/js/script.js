@@ -1,3 +1,52 @@
+const menuItems = document.querySelectorAll('.menu-item-img-container');
+
+menuItems.forEach(item => {
+  const svg = item.querySelector('.menu-item-img');
+
+  item.addEventListener('mouseenter', () => {
+    svg.style.fill = '#58419b'; 
+  });
+
+  item.addEventListener('mouseleave', () => {
+    svg.style.fill = ''; 
+  });
+});
+
+const checkbox = document.getElementById('check');
+const menu = document.getElementById('menu');
+const menuName = document.getElementById('menu-name');
+const textMenu = document.getElementById('text-menu');
+const iconMenu = document.getElementById('icon-menu');
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  checkbox.addEventListener('change', function() {
+    if (!this.checked) {
+      menu.classList.add('collapsed');
+			menuName.classList.add('collapsed');
+			textMenu.classList.add('collapsed');
+			iconMenu.classList.remove('collapsed');
+    } else {
+      menu.classList.remove('collapsed');
+			menuName.classList.remove('collapsed');
+			textMenu.classList.remove('collapsed');
+			iconMenu.classList.add('collapsed');
+    }
+  });
+});
+
+function iconClicked (uiID, arrowID) {
+  checkbox.checked = !checkbox.checked;
+	checkbox.dispatchEvent(new Event('change'));
+
+	var uiList = document.getElementById(uiID);
+	var arrow = document.getElementById(arrowID);
+
+	if (uiList.classList.contains('rolled')) {
+    uiList.classList.remove('rolled');
+		arrow.classList.remove('rotated');
+	}
+}
 
 function goFullScreen(headerID, menuID, containerID, breadcrumbsID) {
 	let header = document.getElementById(headerID);
@@ -93,24 +142,6 @@ input.addEventListener('input', function() {
         }
     };
 });
-
-
-
-function closeTable() {
-	// Код закрытия таблицы
-}
-
-function refreshTable() {
-	// Код обновления таблицы
-}
-
-function showHelp() {
-	// Код отображения справки
-}
-
-function showFilters() {
-	// Код отображения фильтров
-}
 
 // Функция для отправки асинхронного запроса на сервер
 function sendRequest(action, col, id, spanId, buttonId, callback) {

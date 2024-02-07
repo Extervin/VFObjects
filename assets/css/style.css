@@ -401,9 +401,10 @@ hr {
 .menu-item-header {
   color: var(--dark-tone-60);
   font-weight: 300;
-  font-size: 12px;
+  font-size: 14px;
   padding: 20px 20px 20px 20px;
   cursor: pointer;
+  margin: 11px;
 }
 #menu {
   float: left;
@@ -412,6 +413,8 @@ hr {
   scrollbar-width: thin;
   position: sticky;
   top: 0;
+  width: auto;
+  transition: width 0.5s ease-in-out;
 }
 .menu-option {
   transition: all 0.2s ease;
@@ -431,7 +434,7 @@ hr {
   top: 0;
   z-index: 1;
 }
-.menu-name {
+#menu-name {
   font-size: 26px;
   color: #FFF;
 }
@@ -509,9 +512,6 @@ input[type]:checked ~ span.middle {
   color: inherit;
   transition: color 0.5s ease;
 }
-.tag-container {
-
-}
 .tag {
   margin: 0px 2px;
   padding: 0px 12px;
@@ -575,9 +575,6 @@ tr:hover {
 .new {
   background-color: rgba(255, 0, 50, 0.1);
 }
-.unusual {
-  
-}
 .click-object {
   background-color: rgba(255, 255, 65, 0.1);
 }
@@ -603,4 +600,45 @@ tr.click-object:nth-child(even) {
 }
 .unusual .object-name {
   color: rgb(20, 157, 0);
+}
+.menu-item-img-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px auto;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+}
+.menu-item-img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  transition: transform 0.3s; 
+}
+.menu-item-img-container:hover {
+  background-color: var(--accent-opac-8); 
+  border-color: var(--accent-opac-8); 
+  transform: scale(1.1); 
+}
+.menu-item-img-container:active {
+  background-color: #654ded33; 
+  border-color: #654ded33; 
+  transform: scale(1);
+}
+#menu.collapsed {
+  width: 100px;
+}
+#menu-name.collapsed {
+  display: none;
+}
+#text-menu.collapsed {
+  display: none;
+}
+#icon-menu.collapsed {
+  display: none;
 }
