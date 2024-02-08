@@ -1,4 +1,9 @@
 const menuItems = document.querySelectorAll('.menu-item-img-container');
+const rolledList = [['devices', 'devices-arrow'], 
+										['connection', 'connection-arrow'], 
+										['objects', 'objects-arrow'], 
+										['tickets', 'tickets-arrow'], 
+										['actions', 'actions-arrow']]
 
 menuItems.forEach(item => {
   const svg = item.querySelector('.menu-item-img');
@@ -36,6 +41,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function iconClicked (uiID, arrowID) {
+
+	rolledList.forEach(pair => {
+    const [elementId, arrowId] = pair; // Деструктуризация пары
+    const element = document.getElementById(elementId); // Получаем элемент по его идентификатору
+    const arrow = document.getElementById(arrowId); // Получаем стрелку по ее идентификатору
+
+    if (element && arrow) { // Проверяем, что элемент и стрелка найдены
+        element.classList.add('rolled'); // Добавляем класс 'rolled' к элементу
+        arrow.classList.add('rotated'); // Добавляем класс 'rolled' к стрелке
+    }
+	});
+
   checkbox.checked = !checkbox.checked;
 	checkbox.dispatchEvent(new Event('change'));
 

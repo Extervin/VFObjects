@@ -160,7 +160,7 @@ c-371 -1 -685 -2 -697 -2 -22 -1 -23 2 -26 101 l-3 103 678 3 c373 1 688 3
         </svg>
       </div>
       <hr>
-      <div class="menu-item-img-container" onclick="iconClicked('connection', 'connection-arrow')">>
+      <div class="menu-item-img-container" onclick="iconClicked('connection', 'connection-arrow')">
         <svg class="menu-item-img" version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
           height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
 
