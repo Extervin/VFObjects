@@ -521,7 +521,9 @@ l-34 -98 -131 0 -132 0 -37 104 c-21 58 -45 111 -54 119 -9 8 -41 22 -71 32
           </div>
 
         </div>
-        <?php include('backend.php'); ?>
+        <div id="table-scrollbar-container">
+          <?php include('backend.php'); ?>
+        </div>
       </div>
 
     </div>

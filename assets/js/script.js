@@ -70,7 +70,8 @@ function goFullScreen(headerID, menuID, containerID, breadcrumbsID) {
 	let menu = document.getElementById(menuID);
 	let container = document.getElementById(containerID);
 	let breadcrumbs = document.getElementById(breadcrumbsID)
-
+	let tableContainer = document.getElementById('table-scrollbar-container'); 
+	
 	if (menu.style.display === 'none') {
 		breadcrumbs.style.removeProperty('display');
 		header.style.removeProperty('display');
@@ -80,17 +81,19 @@ function goFullScreen(headerID, menuID, containerID, breadcrumbsID) {
 		container.style.removeProperty('marginBottom');
 		container.style.removeProperty('marginLeft');
 		container.style.removeProperty('height');
+		tableContainer.style.removeProperty('height');
 	} else {
 		breadcrumbs.style.display = 'none';
 		header.style.display = 'none';
 		menu.style.display = 'none';
-		container.style.marginTop = '17px';
+		container.style.marginTop = '13px';
 		container.style.marginRight = '10px';
 		container.style.marginBottom = '0px';
 		container.style.marginLeft = '10px';
+		tableContainer.style.height = '100vh';
 		container.style.height = '98vh';
 	}
-
+	
 }
 
 let changeAllowed = true;

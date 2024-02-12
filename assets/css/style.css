@@ -64,8 +64,6 @@ body {
   background-color: #FFF;
   filter: drop-shadow(1.5px 2.6px 10px rgba(119, 119, 119, 0.10));
   height: 81vh;
-  overflow: auto;
-  scrollbar-width: thin;
 }
 #table-buttons {
   display: flex;
@@ -100,11 +98,17 @@ body {
   border: 1px solid #ddd;
   background-color: #F3F6F9;
 }
-
+#table-scrollbar-container {
+  height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+}
 table {
   border-collapse: collapse;
-  width: 98%;
-  margin: 0 auto 10px;
+  width: 100%;
 }
 
 th, td {
@@ -336,6 +340,13 @@ input:hover {
 
 .selector-container {
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.selector-element-container {
+  display: flex;
+  gap: 15px;
 }
 #table-selector {
   background-color: transparent;
@@ -402,7 +413,7 @@ hr {
   color: var(--dark-tone-60);
   font-weight: 300;
   font-size: 14px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 9px;
   cursor: pointer;
   margin: 11px;
 }
@@ -410,11 +421,12 @@ hr {
   float: left;
   max-height: 100vh;
   overflow-y: auto;
+
   scrollbar-width: thin;
   position: sticky;
   top: 0;
-  width: auto;
-  transition: width 0.5s ease-in-out;
+  width: 255px;
+  transition: width 0.5s ease;
 }
 .menu-option {
   transition: all 0.2s ease;
@@ -630,6 +642,14 @@ tr.click-object:nth-child(even) {
   border-color: #654ded33; 
   transform: scale(1);
 }
+#text-menu {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+#icon-menu {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
 #menu.collapsed {
   width: 100px;
 }
@@ -637,8 +657,10 @@ tr.click-object:nth-child(even) {
   display: none;
 }
 #text-menu.collapsed {
+  transform: translateX(-100%);
   display: none;
 }
 #icon-menu.collapsed {
+  transform: translateX(-100%);
   display: none;
 }
